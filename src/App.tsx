@@ -1,5 +1,7 @@
 import "./App.css";
 import Header from "./components/Header/Header";
+import JobList from "./components/JobList/JobList";
+import TitleSection from "./components/TitleSection/TitleSection";
 
 function App() {
   return (
@@ -14,6 +16,12 @@ function App() {
             <p className="mt-4 text-center text-white max-w-[50rem] mx-auto">
               Sou desenvolvedor front-end com experiência na criação de interfaces modernas e responsivas, utilizando HTML, CSS, JavaScript, TypeScript, React e Next.js. Trabalho com integração de APIs e foco em performance, usabilidade e boas práticas de desenvolvimento. Estou sempre em busca de evolução contínua e soluções criativas para cada projeto.
             </p>
+          </div>
+        </section>
+        <section className="p-5 bg-white">
+          <div className="container mx-auto">
+            <TitleSection title="Experiência Profissional" />
+            <JobList />
           </div>
         </section>
       </main>
