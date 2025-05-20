@@ -2,8 +2,11 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import JobList from "./components/JobList/JobList";
 import TitleSection from "./components/TitleSection/TitleSection";
+import WorksList from "./components/WorksList/WorkList";
+
 
 function App() {
+
   return (
     <>
       <Header />
@@ -22,6 +25,13 @@ function App() {
           <div className="container mx-auto">
             <TitleSection title="Experiência Profissional" />
             <JobList />
+          </div>
+        </section>
+
+        <section className="p-5 bg-white">
+          <div className="container mx-auto">
+            <TitleSection title="Projetos" />
+            <WorksList />
           </div>
         </section>
       </main>
