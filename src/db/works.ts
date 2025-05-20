@@ -1,6 +1,6 @@
-import type Work from "../components/types/Works";
+import type { IWork } from "../interfaces/Works";
 
-export const mockWorks: Work[] = [
+export const mockWorks: IWork[] = [
   {
     "id": 1,
     "title": "Projeto 1",

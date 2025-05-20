@@ -21,6 +21,15 @@ export default function WorksList() {
           </div>
           <h3>{work.title}</h3>
           <p>{work.description}</p>
+          {work.stacks.length > 0 && (
+            <div className="flex gap-2 mt-2">
+              {work.stacks.map((stack) => (
+                <span key={stack} className="text-gray-800 py-1 px-2 rounded">
+                  {stack}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       ))}
     </div>

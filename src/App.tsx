@@ -11,7 +11,7 @@ function App() {
     <>
       <Header />
       <main className="">
-        <section className="w-full h-[100dvh] flex items-center">
+        <section className="w-full h-[70dvh] flex items-center">
           <div className="container mx-auto">
             <h1 className="text-6xl text-white text-center">
               Olá, sou <span className="text-amber-500 font-bold">Andersen Cypriano</span>
