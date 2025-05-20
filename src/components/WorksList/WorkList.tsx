@@ -1,20 +1,14 @@
 import { useEffect, useState } from "react";
 import { mockWorks } from "../../db/works";
-
-export interface IWork {
-  id: number;
-  title: string;
-  description: string;
-  imageUrl: string;
-}
-
+import type { IWork } from "../../interfaces/Works";
 export default function WorksList() {
   const [works, setWorks] = useState<IWork[]>([]);
 
   useEffect(() => {
     setWorks(mockWorks);
   }, []);
-  console.log(works);
+
+
   return (
     <div className="flex items-stretch gap-4">
       {works.map((work) => (
