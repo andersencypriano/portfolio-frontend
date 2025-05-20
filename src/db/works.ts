@@ -3,23 +3,23 @@ import type { IWork } from "../interfaces/Works";
 export const mockWorks: IWork[] = [
   {
     "id": 1,
-    "title": "Projeto 1",
-    "description": "Descrição do Projeto 1",
-    "imageUrl": "https://placehold.co/300x200",
+    "title": "Aqua Arte",
+    "description": "Estruturação e estilização de loja na plataforma NuvemShop",
+    "imageUrl": "/public/images/projects/aquaarte.jpg",
     "stacks": ["HTML", "CSS", "JavaScript"]
   },
   {
     "id": 2,
-    "title": "Projeto 2",
-    "description": "Descrição do Projeto 2",
-    "imageUrl": "https://placehold.co/300x200",
+    "title": "Conexão Home",
+    "description": "Estruturação e estilização de loja na plataforma E-com.plus",
+    "imageUrl": "/public/images/projects/conexaohome.jpg",
     "stacks": ["HTML", "CSS", "JavaScript"]
   },
   {
     "id": 3,
-    "title": "Projeto 3",
-    "description": "Descrição do Projeto 3",
-    "imageUrl": "https://placehold.co/300x200",
+    "title": "Go Compras",
+    "description": "Estruturação e estilização de loja na plataforma Wbuy",
+    "imageUrl": "/public/images/projects/gocompras.jpg",
     "stacks": ["HTML", "CSS", "JavaScript"]
   }
 ]
