@@ -35,6 +35,13 @@ function App() {
             <WorksList />
           </div>
         </section>
+
+        <section className="p-5 bg-white">
+          <div className="container mx-auto">
+            <TitleSection title="Projetos" />
+            <WorksList />
+          </div>
+        </section>
       </main>
       <Footer />
     </>
