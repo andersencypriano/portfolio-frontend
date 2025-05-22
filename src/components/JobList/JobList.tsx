@@ -5,7 +5,7 @@ import logoFav from '../../assets/jobs/ogilvy_fav.jpg';
 export default function JobList () {
   return (
     <>
-      <div className="flex items-stretch gap-4">
+      <div className="flex items-stretch gap-4 mb-5">
         <div className="p-4 border border-gray-300 rounded flex flex-1/3 gap-2 max-w-1/3">
           <div className="w-[20%]" >
             <img src={logoMt} alt="MT Soluções" className='w-full'/>

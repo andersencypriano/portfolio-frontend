@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { mockWorks } from "../../db/works";
 import type { IWork } from "../../interfaces/Works";
-import { ImLink } from "react-icons/im";
 import { Link } from "lucide-react";
 export default function WorksList() {
   const [works, setWorks] = useState<IWork[]>([]);
@@ -12,7 +11,7 @@ export default function WorksList() {
 
 
   return (
-    <div className="flex items-stretch gap-4">
+    <div className="flex items-stretch gap-4 mb-5">
       {works.map((work) => (
         <div
           key={work.id}
