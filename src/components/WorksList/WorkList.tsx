@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { mockWorks } from "../../db/works";
 import type { IWork } from "../../interfaces/Works";
 import { Link } from "lucide-react";
+import Icon from "../testes/Icon";
 export default function WorksList() {
   const [works, setWorks] = useState<IWork[]>([]);
 
@@ -33,7 +34,7 @@ export default function WorksList() {
           )} */}
           <div className="absolute right-2 bottom-2 flex gap-2 mt-2">
             <a href="#">
-              <Link/>
+              <Icon icon={Link} />
             </a>
           </div> 
         </div>
