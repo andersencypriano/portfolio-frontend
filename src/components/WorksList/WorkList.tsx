@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { mockWorks } from "../../db/works";
 import type { IWork } from "../../interfaces/Works";
 import { Link } from "lucide-react";
-import Icon from "../testes/Icon";
+import Icon from "../IconComponent/Icon";
 export default function WorksList() {
   const [works, setWorks] = useState<IWork[]>([]);
 

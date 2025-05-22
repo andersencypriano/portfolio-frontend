@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import JobList from "./components/JobList/JobList";
 import TitleSection from "./components/TitleSection/TitleSection";
@@ -35,6 +36,7 @@ function App() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
