@@ -13,7 +13,7 @@ function App() {
     <>
       <Header />
       <main className="">
-        <section className="w-full h-[70dvh] flex items-center mb-4 bg-bg">
+        <section className="w-full h-[70dvh] flex items-center mb-4 bg-bg" id="sobre">
           <div className="container mx-auto">
             <h1 className="text-6xl text-white text-center">
               Olá, sou <span className="text-amber-500 font-bold">Andersen Cypriano</span>
@@ -23,20 +23,20 @@ function App() {
             </p>
           </div>
         </section>
-        <section className="p-5 bg-white">
+        <section className="p-5 bg-white" id="experiencia">
           <div className="container mx-auto">
             <TitleSection title="Experiência Profissional" />
             <JobList />
           </div>
         </section>
 
-        <section className="p-5 bg-white">
+        <section className="p-5 bg-white" id="projetos">
           <div className="container mx-auto">
             <TitleSection title="Projetos" />
             <WorksList />
           </div>
         </section>
-        <section className="p-5 bg-white">
+        <section className="p-5 bg-white" id="tecnologias">
           <div className="container mx-auto">
             <TitleSection title="Tecnologias" />
             <Skills />
