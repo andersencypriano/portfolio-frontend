@@ -1,4 +1,5 @@
 import "./App.css";
+import EducationList from "./components/EducationSection/EducationList";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import JobList from "./components/JobList/JobList";
@@ -40,6 +41,12 @@ function App() {
           <div className="container mx-auto">
             <TitleSection title="Tecnologias" />
             <Skills />
+          </div>
+        </section>
+        <section id="academico">
+          <div className="container mx-auto">
+            <TitleSection title="Formação Acadêmica" />
+            <EducationList />
           </div>
         </section>
       </main>
