@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { IEducationItem } from "../../interfaces/Education";
-import { mockEducationList } from "../../db/Education";
+import { mockEducationList } from "../../db/education";
 import EducationItem from "./EducationItem";
 
 export default function EducationList () {
