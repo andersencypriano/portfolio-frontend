@@ -10,11 +10,13 @@ export default function EducationList () {
     setEducationList(mockEducationList);
   }, []);
 
+ 
+
   return (
     <>
-      <ul>
+      <ul className="md:flex md:justify-center md:gap-4">
         {educationList.map((education, index) => (
-          <li key={index}>
+          <li key={index} className="md:flex-1">
             <EducationItem education={education} />
           </li>
         ))}

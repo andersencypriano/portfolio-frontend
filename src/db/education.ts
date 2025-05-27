@@ -1,20 +1,18 @@
 export const mockEducationList = [
   {
-    institution: "Universidade XYZ",
-    course: "Bacharel em Ciência da Computação",
-    year: "2020",
-    imageUrl: "https://via.placeholder.com/150",
-    dataStart: "2016-01-01",
-    dataEnd: "2020-12-31",
-    description: "Descrição do curso."
+    institution: "ETEC - Escola Técnica Estadual de São Paulo",
+    course: "Ensino Técnico - Analise e Desenvolvimento de Sistemas",
+    imageUrl: "/public/images/education/etec.jpg",
+    dataStart: "06/01/2020",
+    dataEnd: "06/01/2022",
+    description: "Concluído",
   },
   {
-    institution: "Escola ABC",
-    course: "Técnico em Informática",
-    year: "2015",
-    imageUrl: "https://via.placeholder.com/150",
-    dataStart: "2013-01-01",
-    dataEnd: "2015-12-31",
-    description: "Descrição do curso."
-  }
+    institution: "Universidade Paulista",
+    course: "Analise e Desenvolvimento de Sistemas",
+    imageUrl: "/public/images/education/unip.jpg",
+    dataStart: "02/05/2012",
+    dataEnd: "12/01/2014",
+    description: "Incompleto.",
+  },
 ];

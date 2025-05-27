@@ -1,9 +1,8 @@
 export interface IEducationItem {
   institution: string;
   course: string;
-  year: string;
   imageUrl?: string;
+  description?: string;
   dataStart: string
   dataEnd: string;
-  description?: string;
 }

@@ -43,7 +43,7 @@ function App() {
             <Skills />
           </div>
         </section>
-        <section id="academico">
+        <section className="py-5" id="academico">
           <div className="container mx-auto">
             <TitleSection title="Formação Acadêmica" />
             <EducationList />
