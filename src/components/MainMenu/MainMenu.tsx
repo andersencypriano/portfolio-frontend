@@ -25,6 +25,11 @@ export default function MainMenu({flexDirection = "column"}: MainMenuProps) {
           Tecnologias
         </a>
       </li>
+      <li className="flex items-center">
+        <a href="#contato" onClick={scrollToSection} className="text-bg">
+          Contato
+        </a>
+      </li>
       
     </ul>
   );

@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import JobList from "./components/JobList/JobList";
 import Skills from "./components/Skills/Skills";
+import SocialLinks from "./components/SocialLinks/SocialLinks";
 import TitleSection from "./components/TitleSection/TitleSection";
 import WorksList from "./components/WorksList/WorkList";
 
@@ -65,14 +66,29 @@ function App() {
         <section className="p-5 bg-white" id="contato">
           <div className="container mx-auto">
             <TitleSection title="Contato" />
-            <div className="flex flex-col gap-4 md:max-w-1/2 md:mx-auto">
+            <div className="flex gap-4 md:mx-auto">
+              <div className="w-1/2 shadow-lg rounded-lg flex flex-col items-center justify-center">
                 <Avatar />
-              <p className="p-4 text-gray-600 text-[1.1rem]">
+                <h2 className="text-center text-2xl font-bold text-gray-800 leading-5 my-5">
+                  Andersen Cypriano
+                  <br />
+                  <span className="text-[.9rem] font-normal mb-5">
+                    Desenvolvedor Front-end
+                  </span>
+                </h2>
+                <div className="flex justify-center">
+                  <SocialLinks />
+                </div>
+              </div>
+              <div className="w-1/2">
+                <p className="p-4 text-gray-600 text-[1.1rem]">
                 Estou disponível para novas oportunidades de trabalho, projetos
-                como freelancer ou parcerias profissionais. Envie sua mensagem pelo formulário abaixo e
-                retornarei o contato o mais breve possível.
+                como freelancer ou parcerias profissionais. Envie sua mensagem
+                pelo formulário abaixo e retornarei o contato o mais breve
+                possível.
               </p>
               <Contact />
+              </div>
             </div>
           </div>
         </section>

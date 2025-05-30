@@ -18,7 +18,9 @@ export default function Header() {
           )}
           <Logo/>
           <MainMenu flexDirection="row"/>
-          <SocialLinks />
+          <div className="w-1/4 flex justify-end items-center">
+            <SocialLinks />
+          </div>
         </div>
       </header>
     </>
