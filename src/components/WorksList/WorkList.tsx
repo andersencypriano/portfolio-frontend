@@ -6,6 +6,7 @@ import Icon from "../IconComponent/Icon";
 export default function WorksList() {
   const [works, setWorks] = useState<IWork[]>([]);
 
+  
   useEffect(() => {
     setWorks(mockWorks);
   }, []);

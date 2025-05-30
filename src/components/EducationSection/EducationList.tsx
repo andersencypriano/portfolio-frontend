@@ -14,7 +14,7 @@ export default function EducationList () {
 
   return (
     <>
-      <ul className="md:flex md:justify-center md:gap-4">
+      <ul>
         {educationList.map((education, index) => (
           <li key={index} className="md:flex-1">
             <EducationItem education={education} />

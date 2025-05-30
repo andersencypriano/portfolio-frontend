@@ -10,13 +10,18 @@ export default function MainMenu({flexDirection = "column"}: MainMenuProps) {
         </a>
       </li>
       <li className="flex items-center">
-        <a href="#projetos" onClick={scrollToSection} className="text-bg">
-          Projetos
+        <a href="#formacao" onClick={scrollToSection} className="text-bg">
+          Formação acadêmica
         </a>
       </li>
       <li className="flex items-center">
         <a href="#tecnologias" onClick={scrollToSection} className="text-bg">
           Tecnologias
+        </a>
+      </li>
+      <li className="flex items-center">
+        <a href="#projetos" onClick={scrollToSection} className="text-bg">
+          Projetos
         </a>
       </li>
     </ul>

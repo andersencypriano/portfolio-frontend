@@ -6,7 +6,7 @@ interface IEducationItemProps {
 
 export default function EducationItem({ education }: IEducationItemProps) {
   return (
-    <div className="md: flex  md:gap-4 p-4 bg-white rounded-lg shadow-md">
+    <div className="mb-4 md: flex  md:gap-4 p-4 bg-white rounded-lg shadow-md">
       <div className="w-[4.5rem] mb-3.5">
         <img src={education.imageUrl} alt={education.institution} className="w-full" />
       </div>
