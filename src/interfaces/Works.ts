@@ -4,4 +4,5 @@ export interface IWork {
   description: string;
   imageUrl: string;
   stacks: string[];
+  url: string;
 }

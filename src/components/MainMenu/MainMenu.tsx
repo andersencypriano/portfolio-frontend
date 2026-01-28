@@ -1,9 +1,9 @@
 import type { MainMenuProps } from "../../interfaces/MainMenu";
 import scrollToSection from "../../utils/ScrollToSection";
 
-export default function MainMenu({flexDirection = "column"}: MainMenuProps) {
+export default function MainMenu({ flexDirection = "column" }: MainMenuProps) {
   return (
-    <ul className={`flex gap-2.5 ${flexDirection === "column" ? "flex-col" : "flex-row"}`}>
+    <ul className={`flex md:flex-row gap-2.5 ${flexDirection === "column" ? "flex-col" : "flex-row"}`}>
       <li className="flex items-center">
         <a href="#experiencia" onClick={scrollToSection} className="text-bg">
           Experiência
@@ -19,7 +19,7 @@ export default function MainMenu({flexDirection = "column"}: MainMenuProps) {
           Formação acadêmica
         </a>
       </li>
-      
+
       <li className="flex items-center">
         <a href="#tecnologias" onClick={scrollToSection} className="text-bg">
           Tecnologias
@@ -30,7 +30,7 @@ export default function MainMenu({flexDirection = "column"}: MainMenuProps) {
           Contato
         </a>
       </li>
-      
+
     </ul>
   );
 }

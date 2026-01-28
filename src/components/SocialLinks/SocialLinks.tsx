@@ -2,7 +2,7 @@ import { LuFileDown, LuGithub, LuLinkedin } from "react-icons/lu";
 
 export default function SocialLinks() {
   return (
-    <div className="flex gap-4 justify-center items-center">
+    <div className="flex gap-1 md:gap-4 justify-center items-center">
       <a
         href="https://github.com/andersencypriano"
         target="_blank"

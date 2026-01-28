@@ -10,7 +10,7 @@ export default function EducationItem({ education }: IEducationItemProps) {
       <div className="w-[4.5rem] mb-3.5">
         <img src={education.imageUrl} alt={education.institution} className="w-full" />
       </div>
-      <div className="education-item">
+      <div className="education-item px-2">
         <h2 className="font-bold">{education.institution}</h2>
         <p className="text-[1rem] font-primary">{education.course}</p>
         <p className="text-gray-600 text-[.9rem] mt-2">{education.description}</p>

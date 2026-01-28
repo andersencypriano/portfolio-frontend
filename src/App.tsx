@@ -10,8 +10,11 @@ import Skills from "./components/Skills/Skills";
 import SocialLinks from "./components/SocialLinks/SocialLinks";
 import TitleSection from "./components/TitleSection/TitleSection";
 import WorksList from "./components/WorksList/WorkList";
+import { useIsMobile } from "./hooks/useIsMobile";
 
 function App() {
+  const isMobile = useIsMobile();
+
   return (
     <>
       <Header />
@@ -21,14 +24,14 @@ function App() {
           id="sobre"
         >
           <div className="container mx-auto mt-24">
-            <h1 className="text-6xl text-white text-center">
-              Olá, sou{" "}
-              <span className="text-amber-500 font-bold">
+            <h1 className="md:text-6xl text-3xl text-white text-center">
+              Olá, sou
+              <span className="block text-amber-500 font-bold text-4xl">
                 Andersen Cypriano
               </span>
             </h1>
-            <p className="my-4 text-center text-white max-w-[50rem] mx-auto">
-              Sou desenvolvedor front-end com experiência na criação de
+            <p className="px-3 my-4 text-center text-white max-w-[50rem] mx-auto">
+              Desenvolvedor front-end com experiência na criação de
               interfaces modernas e responsivas, utilizando HTML, CSS,
               JavaScript, TypeScript, React e Next.js. Trabalho com integração
               de APIs e foco em performance, usabilidade e boas práticas de
@@ -51,23 +54,27 @@ function App() {
             <WorksList />
           </div>
         </section>
-        <section className="py-5" id="formacao">
+        <section className="p-5" id="formacao">
           <div className="container mx-auto">
             <TitleSection title="Formação Acadêmica" />
             <EducationList />
           </div>
         </section>
-        <section className="p-5 bg-white" id="tecnologias">
+        {/* <section className="p-5 bg-white" id="tecnologias">
           <div className="container mx-auto">
-            <TitleSection title="Tecnologias" />
-            <Skills />
+            {!isMobile && (
+              <>
+                <TitleSection title="Tecnologias" />
+                <Skills />
+              </>
+            )}
           </div>
-        </section>
+        </section> */}
         <section className="p-5 bg-white" id="contato">
           <div className="container mx-auto">
             <TitleSection title="Contato" />
-            <div className="flex gap-4 md:mx-auto">
-              <div className="w-1/2 shadow-lg rounded-lg flex flex-col items-center justify-center">
+            <div className="md:flex gap-4 md:mx-auto ">
+              <div className="md:w-1/2 shadow-lg rounded-lg flex flex-col items-center justify-center md:py-0 py-4">
                 <Avatar />
                 <h2 className="text-center text-2xl font-bold text-gray-800 leading-5 my-5">
                   Andersen Cypriano
@@ -80,14 +87,14 @@ function App() {
                   <SocialLinks />
                 </div>
               </div>
-              <div className="w-1/2">
+              <div className="md:mt-0 mt-4 md:w-1/2">
                 <p className="p-4 text-gray-600 text-[1.1rem]">
-                Estou disponível para novas oportunidades de trabalho, projetos
-                como freelancer ou parcerias profissionais. Envie sua mensagem
-                pelo formulário abaixo e retornarei o contato o mais breve
-                possível.
-              </p>
-              <Contact />
+                  Estou disponível para novas oportunidades de trabalho, projetos
+                  como freelancer ou parcerias profissionais. Envie sua mensagem
+                  pelo formulário abaixo e retornarei o contato o mais breve
+                  possível.
+                </p>
+                <Contact />
               </div>
             </div>
           </div>

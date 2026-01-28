@@ -8,16 +8,20 @@ import { useIsMobile } from "../../hooks/useIsMobile";
 
 export default function Header() {
   const isMobile = useIsMobile();
-  
+
   return (
     <>
       <header className="bg-gray-300 fixed w-[100dvw] p-3 z-40 md:w-full">
         <div className="container flex items-center justify-between mx-auto">
           {isMobile && (
-            <HamburgerMenu />
+            <div className="w-1/4">
+              <HamburgerMenu />
+            </div>
           )}
-          <Logo/>
-          <MainMenu flexDirection="row"/>
+          <Logo />
+          <div className="hidden md:block">
+            <MainMenu flexDirection="row" />
+          </div>
           <div className="w-1/4 flex justify-end items-center">
             <SocialLinks />
           </div>
