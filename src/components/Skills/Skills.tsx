@@ -6,15 +6,7 @@ import iconReact from "../../assets/icons/react.svg";
 import iconTailwind from "../../assets/icons/tailwind.svg";
 import iconTypeScript from "../../assets/icons/typescript.svg";
 
-const skills = [
-  { src: iconHtml, alt: "HTML" },
-  { src: iconCss, alt: "CSS" },
-  { src: iconJs, alt: "JavaScript" },
-  { src: iconReact, alt: "React" },
-  { src: iconNext, alt: "Next" },
-  { src: iconTypeScript, alt: "TypeScript" },
-  { src: iconTailwind, alt: "Tailwind" },
-];
+
 
 export default function Skills() {
   return (

@@ -6,14 +6,13 @@ import EducationList from "./components/EducationSection/EducationList";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import JobList from "./components/JobList/JobList";
-import Skills from "./components/Skills/Skills";
 import SocialLinks from "./components/SocialLinks/SocialLinks";
 import TitleSection from "./components/TitleSection/TitleSection";
 import WorksList from "./components/WorksList/WorkList";
-import { useIsMobile } from "./hooks/useIsMobile";
+// import { useIsMobile } from "./hooks/useIsMobile";
 
 function App() {
-  const isMobile = useIsMobile();
+  // const isMobile = useIsMobile();
 
   return (
     <>
