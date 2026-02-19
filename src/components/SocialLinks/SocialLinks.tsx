@@ -9,7 +9,7 @@ export default function SocialLinks() {
         rel="noopener noreferrer"
         className="rounded border-1 border-b-bg p-1"
       >
-        <LuGithub size={22} strokeWidth={1.5} />
+        <LuGithub size={15} strokeWidth={1.5} />
       </a>
       <a
         href="https://www.linkedin.com/in/andrecypriano/"
@@ -17,7 +17,7 @@ export default function SocialLinks() {
         rel="noopener noreferrer"
         className="rounded border-1 border-b-bg p-1"
       >
-        <LuLinkedin size={22} strokeWidth={1.5} />
+        <LuLinkedin size={15} strokeWidth={1.5} />
       </a>
       <a
         href="https://www.linkedin.com/in/andrecypriano/"
@@ -25,7 +25,7 @@ export default function SocialLinks() {
         rel="noopener noreferrer"
         className="rounded border-1 border-b-bg p-1"
       >
-        <LuFileDown size={22} strokeWidth={1.5} />
+        <LuFileDown size={15} strokeWidth={1.5} />
       </a>
     </div>
   );
