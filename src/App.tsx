@@ -1,7 +1,7 @@
 import "./App.css";
 import Avatar from "./components/Avatar/Avatar";
 import GradientButton from "./components/Buttons/GradientButton";
-import Contact from "./components/Contact/Contact";
+import FormContact from "./components/Contact/form/FormContact";
 import EducationList from "./components/EducationSection/EducationList";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -93,7 +93,7 @@ function App() {
                   pelo formulário abaixo e retornarei o contato o mais breve
                   possível.
                 </p>
-                <Contact />
+                <FormContact />
               </div>
             </div>
           </div>

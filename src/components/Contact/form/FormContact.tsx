@@ -1,4 +1,4 @@
-export default function Contact () {
+export default function FormContact() {
   return (
     <>
       <form action="" className="flex flex-col gap-4 p-4 bg-white shadow-lg rounded-lg">
