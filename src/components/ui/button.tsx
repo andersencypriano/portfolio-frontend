@@ -11,26 +11,21 @@ interface BaseButtonProps {
 }
 
 type ButtonAsButton = BaseButtonProps &
-  ButtonHTMLAttributes<HTMLButtonElement> & {
-    asChild?: false;
+  Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className"> & {
     href?: never;
   };
 
 type ButtonAsAnchor = BaseButtonProps &
-  AnchorHTMLAttributes<HTMLAnchorElement> & {
-    asChild?: true;
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "className"> & {
     href: string;
   };
 
 type ButtonProps = ButtonAsButton | ButtonAsAnchor;
 
 const variantStyles: Record<ButtonVariant, string> = {
-  default:
-    "bg-primary text-primary-foreground hover:bg-primary/90",
-  secondary:
-    "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-  outline:
-    "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+  default: "bg-primary text-primary-foreground hover:bg-primary/90",
+  secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+  outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
   ghost: "hover:bg-accent hover:text-accent-foreground",
   link: "text-primary underline-offset-4 hover:underline",
 };
@@ -55,7 +50,7 @@ export function Button({
   const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if ("href" in props && props.href) {
-    const { href, asChild, ...anchorProps } = props as ButtonAsAnchor;
+    const { href, ...anchorProps } = props as ButtonAsAnchor;
     return (
       <a href={href} className={combinedClassName} {...anchorProps}>
         {children}
@@ -63,9 +58,8 @@ export function Button({
     );
   }
 
-  const { asChild, ...buttonProps } = props as ButtonAsButton;
   return (
-    <button className={combinedClassName} {...buttonProps}>
+    <button className={combinedClassName} {...(props as ButtonAsButton)}>
       {children}
     </button>
   );

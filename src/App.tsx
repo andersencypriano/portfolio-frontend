@@ -13,7 +13,6 @@ import { Card, CardContent } from "./components/ui/card";
 import { Download } from "lucide-react";
 
 function App() {
-  console.log("[v0] App rendering - shadcn layout");
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -40,10 +39,11 @@ function App() {
               desenvolvimento.
             </p>
             <div className="mt-8 flex justify-center gap-4">
-              <Button size="lg" asChild href="#">
-                <><Download className="mr-2 h-4 w-4" />Download CV</>
+              <Button size="lg" href="#">
+                <Download className="mr-2 h-4 w-4" />
+                Download CV
               </Button>
-              <Button size="lg" variant="outline" asChild href="#contato">
+              <Button size="lg" variant="outline" href="#contato">
                 Entre em contato
               </Button>
             </div>
