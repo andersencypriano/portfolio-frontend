@@ -1,10 +1,28 @@
-export default function Avatar() {
+interface AvatarProps {
+  src?: string;
+  alt?: string;
+  size?: "sm" | "md" | "lg";
+}
+
+const sizeClasses = {
+  sm: "h-16 w-16",
+  md: "h-24 w-24",
+  lg: "h-32 w-32",
+};
+
+export default function Avatar({
+  src = "https://avatars.githubusercontent.com/u/6807751?v=4",
+  alt = "Avatar",
+  size = "lg",
+}: AvatarProps) {
   return (
-    <div className="flex justify-center items-center">
+    <div
+      className={`${sizeClasses[size]} overflow-hidden rounded-full border-4 border-background shadow-lg ring-2 ring-border`}
+    >
       <img
-        src="https://avatars.githubusercontent.com/u/6807751?v=4"
-        alt="Avatar"
-        className="w-32 h-32 rounded-full border-4 border-white shadow-lg"
+        src={src}
+        alt={alt}
+        className="h-full w-full object-cover"
       />
     </div>
   );

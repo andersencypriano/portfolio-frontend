@@ -2,35 +2,30 @@ import type { MainMenuProps } from "../../interfaces/MainMenu";
 import scrollToSection from "../../utils/ScrollToSection";
 
 export default function MainMenu({ flexDirection = "column" }: MainMenuProps) {
+  const linkStyles = "text-sm font-medium text-muted-foreground transition-colors hover:text-foreground";
+  
   return (
-    <ul className={`flex md:flex-row gap-2.5 ${flexDirection === "column" ? "flex-col" : "flex-row"}`}>
-      <li className="flex items-center">
-        <a href="#experiencia" onClick={scrollToSection} className="text-bg">
-          Experiência
+    <ul className={`flex gap-6 ${flexDirection === "column" ? "flex-col" : "flex-row"}`}>
+      <li>
+        <a href="#experiencia" onClick={scrollToSection} className={linkStyles}>
+          Experiencia
         </a>
       </li>
-      <li className="flex items-center">
-        <a href="#projetos" onClick={scrollToSection} className="text-bg">
+      <li>
+        <a href="#projetos" onClick={scrollToSection} className={linkStyles}>
           Projetos
         </a>
       </li>
-      <li className="flex items-center">
-        <a href="#formacao" onClick={scrollToSection} className="text-bg">
-          Formação acadêmica
+      <li>
+        <a href="#formacao" onClick={scrollToSection} className={linkStyles}>
+          Formacao
         </a>
       </li>
-
-      <li className="flex items-center">
-        <a href="#tecnologias" onClick={scrollToSection} className="text-bg">
-          Tecnologias
-        </a>
-      </li>
-      <li className="flex items-center">
-        <a href="#contato" onClick={scrollToSection} className="text-bg">
+      <li>
+        <a href="#contato" onClick={scrollToSection} className={linkStyles}>
           Contato
         </a>
       </li>
-
     </ul>
   );
 }

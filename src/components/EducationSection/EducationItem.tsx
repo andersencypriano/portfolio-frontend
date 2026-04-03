@@ -1,25 +1,42 @@
 import type { IEducationItem } from "../../interfaces/Education";
+import { Card, CardContent, CardHeader } from "../ui/card";
+import { Badge } from "../ui/badge";
 
 interface IEducationItemProps {
   education: IEducationItem;
 }
 
 export default function EducationItem({ education }: IEducationItemProps) {
+  const startDate = new Date(education.dataStart).toLocaleDateString("pt-BR", {
+    month: "short",
+    year: "numeric",
+  });
+  const endDate = new Date(education.dataEnd).toLocaleDateString("pt-BR", {
+    month: "short",
+    year: "numeric",
+  });
+
   return (
-    <div className="mb-4 md: flex  md:gap-4 p-4 bg-white rounded-lg shadow-md">
-      <div className="w-[4.5rem] mb-3.5">
-        <img src={education.imageUrl} alt={education.institution} className="w-full" />
-      </div>
-      <div className="education-item px-2">
-        <h2 className="font-bold">{education.institution}</h2>
-        <p className="text-[1rem] font-primary">{education.course}</p>
-        <p className="text-gray-600 text-[.9rem] mt-2">{education.description}</p>
-        <span className="flex align-center">
-          <span className="text-[.9rem]">{new Date(education.dataStart).toLocaleDateString()}</span>
-          <span className="mx-2">-</span>
-          <span className="text-[.9rem]">{new Date(education.dataEnd).toLocaleDateString()}</span>
-        </span>
-      </div>
-    </div>
+    <Card className="h-full">
+      <CardHeader className="flex-row items-start gap-4 space-y-0">
+        <div className="h-12 w-12 shrink-0 overflow-hidden rounded-md border">
+          <img
+            src={education.imageUrl}
+            alt={education.institution}
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <div className="flex-1 space-y-1">
+          <h3 className="font-semibold leading-none">{education.institution}</h3>
+          <p className="text-sm text-muted-foreground">{education.course}</p>
+        </div>
+      </CardHeader>
+      <CardContent>
+        <p className="mb-3 text-sm text-muted-foreground">{education.description}</p>
+        <Badge variant="outline">
+          {startDate} - {endDate}
+        </Badge>
+      </CardContent>
+    </Card>
   );
 }

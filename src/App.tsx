@@ -1,6 +1,4 @@
-import "./App.css";
 import Avatar from "./components/Avatar/Avatar";
-import GradientButton from "./components/Buttons/GradientButton";
 import Contact from "./components/Contact/Contact";
 import EducationList from "./components/EducationSection/EducationList";
 import Footer from "./components/Footer/Footer";
@@ -9,98 +7,118 @@ import JobList from "./components/JobList/JobList";
 import SocialLinks from "./components/SocialLinks/SocialLinks";
 import TitleSection from "./components/TitleSection/TitleSection";
 import WorksList from "./components/WorksList/WorkList";
-// import { useIsMobile } from "./hooks/useIsMobile";
+import Drawer from "./ui/Drawer/Drawer";
+import { Button } from "./components/ui/button";
+import { Card, CardContent } from "./components/ui/card";
+import { Download } from "lucide-react";
 
 function App() {
-  // const isMobile = useIsMobile();
-
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <Header />
-      <main className="">
+      <Drawer />
+      
+      <main>
+        {/* Hero Section */}
         <section
-          className="w-full h-[70dvh] flex items-center mb-4 bg-bg"
+          className="relative flex min-h-[80vh] items-center justify-center border-b bg-muted/40 pt-16"
           id="sobre"
         >
-          <div className="container mx-auto mt-24">
-            <h1 className="md:text-6xl text-3xl text-white text-center">
-              Olá, sou
-              <span className="block text-amber-500 font-bold text-4xl">
+          <div className="container mx-auto px-4 py-16 text-center">
+            <h1 className="text-balance text-4xl font-bold tracking-tight md:text-6xl">
+              Ola, sou
+              <span className="mt-2 block bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
                 Andersen Cypriano
               </span>
             </h1>
-            <p className="px-3 my-4 text-center text-white max-w-[50rem] mx-auto">
-              Desenvolvedor front-end com experiência na criação de
-              interfaces modernas e responsivas, utilizando HTML, CSS,
-              JavaScript, TypeScript, React e Next.js. Trabalho com integração
-              de APIs e foco em performance, usabilidade e boas práticas de
-              desenvolvimento. Estou sempre em busca de evolução contínua e
-              soluções criativas para cada projeto.
+            <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-muted-foreground">
+              Desenvolvedor front-end com experiencia na criacao de interfaces
+              modernas e responsivas, utilizando HTML, CSS, JavaScript,
+              TypeScript, React e Next.js. Trabalho com integracao de APIs e
+              foco em performance, usabilidade e boas praticas de
+              desenvolvimento.
             </p>
-            <GradientButton href="#">Download CV</GradientButton>
+            <div className="mt-8 flex justify-center gap-4">
+              <Button size="lg" asChild href="#">
+                <Download className="mr-2 h-4 w-4" />
+                Download CV
+              </Button>
+              <Button size="lg" variant="outline" asChild href="#contato">
+                Entre em contato
+              </Button>
+            </div>
           </div>
         </section>
-        <section className="p-5 bg-white" id="experiencia">
-          <div className="container mx-auto">
-            <TitleSection title="Experiência Profissional" />
+
+        {/* Experiencia Section */}
+        <section className="py-16" id="experiencia">
+          <div className="container mx-auto px-4">
+            <TitleSection
+              title="Experiencia Profissional"
+              description="Minha trajetoria no desenvolvimento de software"
+            />
             <JobList />
           </div>
         </section>
 
-        <section className="p-5 bg-white" id="projetos">
-          <div className="container mx-auto">
-            <TitleSection title="Projetos" />
+        {/* Projetos Section */}
+        <section className="border-t bg-muted/40 py-16" id="projetos">
+          <div className="container mx-auto px-4">
+            <TitleSection
+              title="Projetos"
+              description="Alguns dos projetos que desenvolvi"
+            />
             <WorksList />
           </div>
         </section>
-        <section className="p-5" id="formacao">
-          <div className="container mx-auto">
-            <TitleSection title="Formação Acadêmica" />
+
+        {/* Formacao Section */}
+        <section className="py-16" id="formacao">
+          <div className="container mx-auto px-4">
+            <TitleSection
+              title="Formacao Academica"
+              description="Minha formacao e certificacoes"
+            />
             <EducationList />
           </div>
         </section>
-        {/* <section className="p-5 bg-white" id="tecnologias">
-          <div className="container mx-auto">
-            {!isMobile && (
-              <>
-                <TitleSection title="Tecnologias" />
-                <Skills />
-              </>
-            )}
-          </div>
-        </section> */}
-        <section className="p-5 bg-white" id="contato">
-          <div className="container mx-auto">
-            <TitleSection title="Contato" />
-            <div className="md:flex gap-4 md:mx-auto ">
-              <div className="md:w-1/2 shadow-lg rounded-lg flex flex-col items-center justify-center md:py-0 py-4">
+
+        {/* Contato Section */}
+        <section className="border-t bg-muted/40 py-16" id="contato">
+          <div className="container mx-auto px-4">
+            <TitleSection
+              title="Contato"
+              description="Vamos conversar sobre seu projeto"
+            />
+            <div className="grid gap-8 md:grid-cols-2">
+              <Card className="flex flex-col items-center justify-center p-8">
                 <Avatar />
-                <h2 className="text-center text-2xl font-bold text-gray-800 leading-5 my-5">
+                <h2 className="mt-6 text-center text-2xl font-bold">
                   Andersen Cypriano
-                  <br />
-                  <span className="text-[.9rem] font-normal mb-5">
-                    Desenvolvedor Front-end
-                  </span>
                 </h2>
-                <div className="flex justify-center">
+                <p className="text-muted-foreground">Desenvolvedor Front-end</p>
+                <div className="mt-4">
                   <SocialLinks />
                 </div>
-              </div>
-              <div className="md:mt-0 mt-4 md:w-1/2">
-                <p className="p-4 text-gray-600 text-[1.1rem]">
-                  Estou disponível para novas oportunidades de trabalho, projetos
-                  como freelancer ou parcerias profissionais. Envie sua mensagem
-                  pelo formulário abaixo e retornarei o contato o mais breve
-                  possível.
-                </p>
-                <Contact />
-              </div>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <p className="mb-6 text-muted-foreground">
+                    Estou disponivel para novas oportunidades de trabalho,
+                    projetos como freelancer ou parcerias profissionais. Envie
+                    sua mensagem pelo formulario abaixo e retornarei o contato o
+                    mais breve possivel.
+                  </p>
+                  <Contact />
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
       </main>
+
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -1,32 +1,18 @@
-import { LuFileDown, LuGithub, LuLinkedin } from "react-icons/lu";
+import { Github, Linkedin, FileDown } from "lucide-react";
+import { Button } from "../ui/button";
 
 export default function SocialLinks() {
   return (
-    <div className="flex gap-1 md:gap-4 justify-center items-center">
-      <a
-        href="https://github.com/andersencypriano"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded border-1 border-b-bg p-1"
-      >
-        <LuGithub size={15} strokeWidth={1.5} />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/andrecypriano/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded border-1 border-b-bg p-1"
-      >
-        <LuLinkedin size={15} strokeWidth={1.5} />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/andrecypriano/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded border-1 border-b-bg p-1"
-      >
-        <LuFileDown size={15} strokeWidth={1.5} />
-      </a>
+    <div className="flex items-center gap-1">
+      <Button variant="ghost" size="icon" asChild href="https://github.com/andersencypriano" target="_blank" rel="noopener noreferrer">
+        <Github className="h-4 w-4" />
+      </Button>
+      <Button variant="ghost" size="icon" asChild href="https://www.linkedin.com/in/andrecypriano/" target="_blank" rel="noopener noreferrer">
+        <Linkedin className="h-4 w-4" />
+      </Button>
+      <Button variant="ghost" size="icon" asChild href="#" target="_blank" rel="noopener noreferrer">
+        <FileDown className="h-4 w-4" />
+      </Button>
     </div>
   );
 }

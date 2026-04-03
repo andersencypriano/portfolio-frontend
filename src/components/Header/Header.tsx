@@ -1,5 +1,3 @@
-
-
 import HamburgerMenu from "../../ui/HamburgerMenu";
 import Logo from "../Logo/Logo";
 import MainMenu from "../MainMenu/MainMenu";
@@ -10,23 +8,21 @@ export default function Header() {
   const isMobile = useIsMobile();
 
   return (
-    <>
-      <header className="bg-gray-300 fixed w-[100dvw] p-3 z-40 md:w-full">
-        <div className="container flex items-center justify-between mx-auto">
-          {isMobile && (
-            <div className="w-1/4">
-              <HamburgerMenu />
-            </div>
-          )}
-          <Logo />
-          <div className="hidden md:block">
-            <MainMenu flexDirection="row" />
+    <header className="fixed top-0 left-0 right-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+        {isMobile && (
+          <div className="w-1/4">
+            <HamburgerMenu />
           </div>
-          <div className="w-1/4 flex justify-end items-center">
-            <SocialLinks />
-          </div>
+        )}
+        <Logo />
+        <nav className="hidden md:flex items-center gap-6">
+          <MainMenu flexDirection="row" />
+        </nav>
+        <div className="flex items-center gap-2">
+          <SocialLinks />
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 }
