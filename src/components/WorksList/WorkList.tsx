@@ -31,8 +31,7 @@ export default function WorksList() {
           </CardContent>
           <CardFooter>
             <Button variant="outline" size="sm" asChild href={work.url} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="mr-2 h-4 w-4" />
-              Ver projeto
+              <><ExternalLink className="mr-2 h-4 w-4" />Ver projeto</>
             </Button>
           </CardFooter>
         </Card>
