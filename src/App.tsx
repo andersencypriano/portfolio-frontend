@@ -1,7 +1,6 @@
 import "./App.css";
 import Avatar from "./components/Avatar/Avatar";
 import GradientButton from "./components/Buttons/GradientButton";
-import FormContact from "./components/Contact/form/FormContact";
 import EducationList from "./components/EducationSection/EducationList";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -37,7 +36,7 @@ function App() {
               desenvolvimento. Estou sempre em busca de evolução contínua e
               soluções criativas para cada projeto.
             </p>
-            <GradientButton href="#">Download CV</GradientButton>
+            <GradientButton href="/cv/CurriculoDevPDF.pdf" download="Curriculo_Andersen_Cypriano.pdf">Download CV</GradientButton>
           </div>
         </section>
         <section className="p-5 bg-white" id="experiencia">
@@ -72,8 +71,8 @@ function App() {
         <section className="p-5 bg-white" id="contato">
           <div className="container mx-auto">
             <TitleSection title="Contato" />
-            <div className="md:flex gap-4 md:mx-auto ">
-              <div className="md:w-1/2 shadow-lg rounded-lg flex flex-col items-center justify-center md:py-0 py-4">
+            <div className="md:flex gap-4 md:mx-auto p-4">
+              <div className="md:w-full shadow-lg rounded-lg flex flex-col items-center justify-center md:py-0 py-4">
                 <Avatar />
                 <h2 className="text-center text-2xl font-bold text-gray-800 leading-5 my-5">
                   Andersen Cypriano
@@ -86,15 +85,9 @@ function App() {
                   <SocialLinks />
                 </div>
               </div>
-              <div className="md:mt-0 mt-4 md:w-1/2">
-                <p className="p-4 text-gray-600 text-[1.1rem]">
-                  Estou disponível para novas oportunidades de trabalho, projetos
-                  como freelancer ou parcerias profissionais. Envie sua mensagem
-                  pelo formulário abaixo e retornarei o contato o mais breve
-                  possível.
-                </p>
+              {/* <div className="md:mt-0 mt-4 md:w-1/2">
                 <FormContact />
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

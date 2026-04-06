@@ -2,7 +2,7 @@ import { LuFileDown, LuGithub, LuLinkedin } from "react-icons/lu";
 
 export default function SocialLinks() {
   return (
-    <div className="flex gap-1 md:gap-4 justify-center items-center">
+    <div className="flex gap-1 md:gap-4 justify-center items-center p-2">
       <a
         href="https://github.com/andersencypriano"
         target="_blank"
@@ -20,8 +20,7 @@ export default function SocialLinks() {
         <LuLinkedin size={15} strokeWidth={1.5} />
       </a>
       <a
-        href="https://www.linkedin.com/in/andrecypriano/"
-        target="_blank"
+        href="/cv/CurriculoDevPDF.pdf" download="Curriculo_Andersen_Cypriano.pdf"
         rel="noopener noreferrer"
         className="rounded border-1 border-b-bg p-1"
       >
