@@ -8,14 +8,29 @@ import JobList from "./components/JobList/JobList";
 import SocialLinks from "./components/SocialLinks/SocialLinks";
 import TitleSection from "./components/TitleSection/TitleSection";
 import WorksList from "./components/WorksList/WorkList";
-// import { useIsMobile } from "./hooks/useIsMobile";
+
+import { useState } from "react";
+import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from "@/components/ui/drawer";
+import MainMenu from "./components/MainMenu/MainMenu";
 
 function App() {
+  const [open, setOpen] = useState(false);
   // const isMobile = useIsMobile();
 
   return (
     <>
-      <Header />
+      <Drawer open={open} onOpenChange={setOpen}>
+        <Header />
+        <DrawerContent>
+          <div className="p-6">
+            <DrawerHeader className="flex justify-between items-center">
+              <DrawerTitle>Menu</DrawerTitle>
+              {/* <DrawerClose className="text-gray-500 font-bold" onClick={() => setOpen(false)}>X</DrawerClose> */}
+            </DrawerHeader>
+            <MainMenu onItemClick={() => setOpen(false)} />
+          </div>
+        </DrawerContent>
+      </Drawer>
       <main className="">
         <section
           className="w-full h-[70dvh] flex items-center mb-4 bg-bg"

@@ -5,13 +5,16 @@ export default function scrollToSection(event: React.MouseEvent<HTMLAnchorElemen
     if (targetId) {
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
-        window.scrollTo({
-          behavior: "smooth",
-          top:
-            targetElement.getBoundingClientRect().top -
-            document.body.getBoundingClientRect().top -
-            81,
-        });
+        // Pequeno atraso para garantir que o Drawer começou a fechar e destravou o scroll do body
+        setTimeout(() => {
+          const offset = 81;
+          const targetTop = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+
+          window.scrollTo({
+            top: targetTop,
+            behavior: "smooth",
+          });
+        }, 50);
       }
     }
   }
