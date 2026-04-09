@@ -1,54 +1,70 @@
-# React + TypeScript + Vite
+# Andersen Cypriano - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o repositório do meu portfolio pessoal, desenvolvido com tecnologias modernas de desenvolvimento front-end para apresentar meus projetos, experiências e habilidades.
 
-Currently, two official plugins are available:
+## 🚀 Versão Publicada
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto está publicado e pode ser acessado através do link:
+👉 **[Visualizar Portfolio Online](https://portfolio-frontend-andersencypriano.vercel.app/)** 
+*(Nota: Certifique-se de atualizar este link caso ocorra alguma alteração na URL de deploy)*
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tecnologias Utilizadas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Este projeto foi construído utilizando as seguintes ferramentas e bibliotecas:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **[React 19](https://react.dev/)** - Biblioteca principal para construção da interface.
+- **[TypeScript](https://www.typescriptlang.org/)** - Superset do JavaScript para tipagem estática.
+- **[Vite](https://vitejs.dev/)** - Build tool extremamente rápida para projetos front-end.
+- **[Tailwind CSS v4](https://tailwindcss.com/)** - Framework de CSS utilitário para estilização rápida e moderna.
+- **[Shadcn/UI](https://ui.shadcn.com/)** - Componentes de interface acessíveis e altamente customizáveis.
+- **[Lucide React](https://lucide.dev/)** - Iconografia moderna e leve.
+- **[Zustand](https://zustand-demo.pmnd.rs/)** - Gerenciamento de estado leve e simples.
+- **[React Hook Form](https://react-hook-form.com/)** & **[Zod](https://zod.dev/)** - Para validação e manipulação de formulários.
+- **[Vaul](https://vaul.emilkowal.ski/)** - Componentes de Drawer (gavetas) para navegação mobile.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ✨ Funcionalidades
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- 📱 **Design Responsivo**: Adaptável para dispositivos móveis, tablets e desktops.
+- 🌑 **Interface Moderna**: Estética limpa com foco na usabilidade.
+- 📄 **Download de CV**: Integração para download direto do currículo profissional.
+- 💼 **Lista de Projetos**: Galeria exibindo trabalhos realizados com detalhes técnicos.
+- 🎓 **Formação e Experiência**: Seções dedicadas à trajetória profissional e acadêmica.
+
+## 📦 Como rodar o projeto localmente
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/andersencypriano/portfolio-frontend.git
+   ```
+
+2. **Entre na pasta do projeto:**
+   ```bash
+   cd portfolio-frontend
+   ```
+
+3. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+
+4. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+
+5. **Acesse no navegador:**
+   `http://localhost:5173`
+
+---
+
+## 👤 Autor
+
+**Andersen Cypriano**
+- LinkedIn: [in/andrecypriano](https://www.linkedin.com/in/andrecypriano/)
+- GitHub: [@andersencypriano](https://github.com/andersencypriano)
+
+---
+
+Desenvolvido com ❤️ por Andersen Cypriano.
