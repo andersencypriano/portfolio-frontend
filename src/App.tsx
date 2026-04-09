@@ -38,10 +38,7 @@ function App() {
         >
           <div className="container mx-auto mt-24">
             <h1 className="md:text-6xl text-3xl text-white text-center">
-              Olá, sou
-              <span className="block text-amber-500 font-bold text-4xl">
-                Andersen Cypriano
-              </span>
+              <span className="text-amber-500 font-bold text-4xl">Andersen Cypriano</span>
             </h1>
             <p className="px-3 my-4 text-center text-white max-w-[50rem] mx-auto">
               Desenvolvedor front-end com experiência na criação de
