@@ -6,7 +6,7 @@ Este é o repositório do meu portfolio pessoal, desenvolvido com tecnologias mo
 
 O projeto está publicado e pode ser acessado através do link:
 👉 **[Visualizar Portfolio Online](https://portfolio-frontend-andersencypriano.vercel.app/)** 
-*(Nota: Certifique-se de atualizar este link caso ocorra alguma alteração na URL de deploy)*
+
 
 ---
 
