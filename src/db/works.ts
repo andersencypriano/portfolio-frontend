@@ -7,7 +7,8 @@ export const mockWorks: IWork[] = [
     "description": "Construido com React, NextJS, TypeScript e Resend",
     "imageUrl": "/images/projects/cobrasis.jpg",
     "stacks": ["HTML", "CSS", "JavaScript"],
-    "url": "https://cobrasis.com.br"
+    "url": "https://cobrasis.com.br",
+    "flag": "Landing Page"
   },
   {
     "id": 1,
@@ -15,7 +16,8 @@ export const mockWorks: IWork[] = [
     "description": "Estruturação e estilização de loja na plataforma NuvemShop, atuando principalmente com HTML, CSS e  Javascript",
     "imageUrl": "/images/projects/aquaarte.jpg",
     "stacks": ["HTML", "CSS", "JavaScript"],
-    "url": "https://aquaarte.com.br"
+    "url": "https://aquaarte.com.br",
+    "flag": "E-commerce"
   },
   {
     "id": 2,
@@ -23,7 +25,8 @@ export const mockWorks: IWork[] = [
     "description": "Estruturação e estilização de loja na plataforma E-com.plus com HTML, CSS e  Javascript",
     "imageUrl": "/images/projects/conexaohome.jpg",
     "stacks": ["HTML", "CSS", "JavaScript"],
-    "url": "https://conexaohome.com.br"
+    "url": "https://conexaohome.com.br",
+    "flag": "E-commerce"
   },
   {
     "id": 3,
@@ -31,6 +34,7 @@ export const mockWorks: IWork[] = [
     "description": "Estruturação e estilização de loja na plataforma Wbuy com HTML, CSS e  Javascript",
     "imageUrl": "/images/projects/gocompras.jpg",
     "stacks": ["HTML", "CSS", "JavaScript"],
-    "url": "https://gocompras.com.br"
+    "url": "https://gocompras.com.br",
+    "flag": "E-commerce"
   }
 ]

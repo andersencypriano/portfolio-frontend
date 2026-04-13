@@ -28,6 +28,9 @@ function App() {
               {/* <DrawerClose className="text-gray-500 font-bold" onClick={() => setOpen(false)}>X</DrawerClose> */}
             </DrawerHeader>
             <MainMenu onItemClick={() => setOpen(false)} />
+            <div className="p-6">
+              <SocialLinks />
+            </div>
           </div>
         </DrawerContent>
       </Drawer>
@@ -93,7 +96,7 @@ function App() {
                     Desenvolvedor Front-end
                   </span>
                 </h2>
-                <div className="flex justify-center">
+                <div className="flex justify-center py-5">
                   <SocialLinks />
                 </div>
               </div>

@@ -5,4 +5,5 @@ export interface IWork {
   imageUrl: string;
   stacks: string[];
   url: string;
+  flag: string;
 }
