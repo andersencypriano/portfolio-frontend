@@ -13,7 +13,7 @@ export default function JobList() {
           <div className="w-[80%]">
             <h3 className="text-[1.2rem] font-secundary">MT Soluções</h3>
             <p className="text-gray-600 text-[.9rem]">Desenvolvedor Front-end</p>
-            <span className="text-gray-400 text-[.8rem]">jun de 2021 - o momento · 4 anos</span>
+            <span className="text-gray-400 text-[.8rem]">jun de 2021 - jun de 2025</span>
             <p className="text-gray-600 text-[.9rem] mt-2">Desenvolvimento de sistemas web e mobile, com foco em performance e usabilidade.</p>
           </div>
         </div>

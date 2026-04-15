@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <Drawer open={open} onOpenChange={setOpen}>
+      <Drawer open={open} onOpenChange={setOpen} direction="left">
         <Header />
         <DrawerContent>
           <div className="p-6">
