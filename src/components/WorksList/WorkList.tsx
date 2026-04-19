@@ -2,67 +2,52 @@ import { useEffect, useState } from "react";
 import { mockWorks } from "../../db/works";
 import type { IWork } from "../../interfaces/Works";
 
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardAction,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-
-
-
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ArrowUpRight } from "lucide-react";
 
 export default function WorksList() {
   const [works, setWorks] = useState<IWork[]>([]);
-
 
   useEffect(() => {
     setWorks(mockWorks);
   }, []);
 
-
   return (
-    <div className="flex flex-col md:flex-row items-stretch gap-4 mb-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {works.map((work) => (
-        <Card className="relative mx-auto w-full max-w-sm pt-0" key={work.id}>
-          <img src={work.imageUrl} alt={work.title} className="w-full aspect-video object-cove" />
-          <CardHeader>
-            <CardAction>
-              <Badge variant="secondary">{work.flag}</Badge>
-            </CardAction>
-            <CardTitle>{work.title}</CardTitle>
-            <CardDescription className="mb-22">
+        <div
+          key={work.id}
+          className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
+        >
+          <div className="relative overflow-hidden">
+            <img
+              src={work.imageUrl}
+              alt={work.title}
+              className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <Badge className="absolute top-4 left-4 bg-white/90 text-gray-900 backdrop-blur-sm">
+              {work.flag}
+            </Badge>
+          </div>
+
+          <div className="p-6">
+            <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+              {work.title}
+            </h3>
+            <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-2">
               {work.description}
-            </CardDescription>
-          </CardHeader>
-          <CardFooter className="w-full flex justify-between items-center absolute bottom-0 right-0">
-            <a href={work.url} target="_blank" rel="noopener noreferrer" className="w-full">
-              <Button className="w-full cursor-pointer hover:bg-primary/80">Ver Projeto</Button>
+            </p>
+            <a href={work.url} target="_blank" rel="noopener noreferrer" className="block">
+              <Button className="w-full bg-gray-900 text-white hover:bg-blue-600 transition-colors duration-300 group/btn">
+                Ver Projeto
+                <ArrowUpRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
+              </Button>
             </a>
-          </CardFooter>
-        </Card>
+          </div>
+        </div>
       ))}
     </div>
   );
 }
-
-
-{/* <div
-          key={work.id}
-          className="relative work-item p-4 pb-8 border border-gray-300 rounded flex-col flex-1/3 gap-2 w-full md:max-w-1/3"
-        >
-          <div className="w-full mb-3.5">
-            <img src={work.imageUrl} alt={work.title} className="w-full" />
-          </div>
-          <h3 className="font-secundary uppercase">{work.title}</h3>
-          <p className="text-gray-600 text-[.9rem] mt-2">{work.description}</p>
-          <div className="absolute right-2 bottom-2 flex gap-2 mt-2">
-            <a href={work.url} target="_blank" rel="noopener noreferrer">
-              <Icon icon={Link} />
-            </a>
-          </div>
-        </div> */}

@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fira+Code&family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -8,9 +8,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-primary: "Geist", monospace;
-  --font-secundary: "Anton", sans-serif;
-  --color-bg: #22212C;
+  --font-primary: "Inter", sans-serif;
+  --font-secundary: "Space Grotesk", sans-serif;
+  --color-bg: #0a0a0f;
+  --color-accent: #3b82f6;
+  --color-accent-light: #60a5fa;
 }
 
 body {

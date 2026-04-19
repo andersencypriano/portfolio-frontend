@@ -11,14 +11,10 @@ export default function EducationList() {
   }, []);
 
   return (
-    <>
-      <ul className="md:flex md:justify-center md:gap-4">
-        {educationList.map((education, index) => (
-          <li key={index} className="md:flex-1">
-            <EducationItem education={education} />
-          </li>
-        ))}
-      </ul>
-    </>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {educationList.map((education, index) => (
+        <EducationItem key={index} education={education} />
+      ))}
+    </div>
   );
 }

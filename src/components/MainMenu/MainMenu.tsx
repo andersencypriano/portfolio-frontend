@@ -8,34 +8,43 @@ export default function MainMenu({ flexDirection = "column", onItemClick }: Main
   };
 
   return (
-    <ul className={`flex md:flex-row gap-2.5 ${flexDirection === "column" ? "flex-col" : "flex-row"}`}>
-      <li className="flex items-center">
-        <a href="#experiencia" onClick={handleClick} className="text-bg">
+    <ul className={`flex gap-1 ${flexDirection === "column" ? "flex-col" : "flex-row"}`}>
+      <li>
+        <a 
+          href="#experiencia" 
+          onClick={handleClick} 
+          className="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/5"
+        >
           Experiência
         </a>
       </li>
-      <li className="flex items-center">
-        <a href="#projetos" onClick={handleClick} className="text-bg">
+      <li>
+        <a 
+          href="#projetos" 
+          onClick={handleClick} 
+          className="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/5"
+        >
           Projetos
         </a>
       </li>
-      <li className="flex items-center">
-        <a href="#formacao" onClick={handleClick} className="text-bg">
-          Formação acadêmica
+      <li>
+        <a 
+          href="#formacao" 
+          onClick={handleClick} 
+          className="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/5"
+        >
+          Formação
         </a>
       </li>
-
-      <li className="flex items-center">
-        <a href="#tecnologias" onClick={handleClick} className="text-bg">
-          Tecnologias
-        </a>
-      </li>
-      <li className="flex items-center">
-        <a href="#contato" onClick={handleClick} className="text-bg">
+      <li>
+        <a 
+          href="#contato" 
+          onClick={handleClick} 
+          className="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/5"
+        >
           Contato
         </a>
       </li>
-
     </ul>
   );
 }

@@ -1,20 +1,22 @@
 import { FaReact } from "react-icons/fa";
-import Icon from "../IconComponent/Icon";
 import { RiTailwindCssFill } from "react-icons/ri";
 
 export default function Footer() {
   return (
-    <footer className="flex justify-center items-center py-4 bg-gray-100">
-      <div className="text-center">
-        <p className="text-gray-600 text-sm">
-          &copy; {new Date().getFullYear()} Andersen Cypriano. Todos os direitos
-          reservados.
-        </p>
-        <p className="flex items-center justify-center gap-2.5 text-gray-600 text-sm">
-          Construído com 
-          <Icon icon={FaReact} size={24} />
-          <Icon icon={RiTailwindCssFill} size={24} />
-        </p>
+    <footer className="bg-[#0a0a0f] border-t border-white/5 py-8">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-gray-400 text-sm">
+            &copy; {new Date().getFullYear()} Andersen Cypriano. Todos os direitos reservados.
+          </p>
+          <div className="flex items-center gap-2 text-gray-400 text-sm">
+            <span>Construído com</span>
+            <div className="flex items-center gap-2">
+              <FaReact className="w-5 h-5 text-cyan-400 hover:animate-spin" />
+              <RiTailwindCssFill className="w-5 h-5 text-cyan-500" />
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
